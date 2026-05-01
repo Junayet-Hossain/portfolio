@@ -29,7 +29,7 @@
         Prospective PhD/MSc Candidate &nbsp;|&nbsp; 
         Lecturer, <span>East Delta University</span>, Chattogram
     </p>
-    <a href="https://drive.google.com/file/d/1E_vBPen4xQXlneIyD5ypaMbVzhVmIarM/view?usp=drive_link" download class="btn header-cv-btn">
+    <a href="https://drive.google.com/file/d/1BQsgId6hmdBWRYIubc_e-W0HAbcB0ajW/view?usp=drive_link" download class="btn header-cv-btn">
         <i class="fa-solid fa-download"></i> &nbsp;Download CV
     </a>
 </div>
@@ -46,7 +46,22 @@
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
                     <a href="mailto:asm.junayethossain@gmail.com">
-                        <i class="fa-solid fa-envelope"></i> Email
+                        <i class="fa-solid fa-envelope"></i> Gmail
+                    </a>
+                    <a href="mailto:junayet.h@eastdelta.edu.bd">
+                        <i class="fa-solid fa-building-columns"></i> EDU Mail
+                    </a>
+                    <a href="https://www.eastdelta.edu.bd/faculty-members/school-of-science-engineering-technology#h.lxiraelrgn8p" target="_blank">
+                        <i class="fa-solid fa-id-badge"></i> EDU Profile
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=en333McAAAAJ&hl=en&authuser=1" target="_blank">
+                        <i class="fa-brands fa-google"></i> Google Scholar
+                    </a>
+                    <a href="https://www.researchgate.net/profile/A-S-M-Junayet-Hossain" target="_blank">
+                        <i class="fa-brands fa-researchgate"></i> ResearchGate
+                    </a>
+                    <a href="https://orcid.org/0009-0007-6810-9570" target="_blank">
+                        <i class="fa-brands fa-orcid"></i> ORCID
                     </a>
                 </div>
             </div>
@@ -57,10 +72,10 @@
                 at East Delta University while actively pursuing graduate study opportunities.</p>
 
                 <div class="tabtitles">
-                    <p class="tablinks activelink" onclick="opentab('education')">Education</p>
-                    <p class="tablinks" onclick="opentab('experience')">Experience</p>
-                    <p class="tablinks" onclick="opentab('publications')">Publications</p>
-                    <p class="tablinks" onclick="opentab('interests')">Research Interests</p>
+                    <p class="tablinks activelink" onclick="opentab('about', 'education')">Education</p>
+                    <p class="tablinks" onclick="opentab('about', 'experience')">Experience</p>
+                    <p class="tablinks" onclick="opentab('about', 'publications')">Publications</p>
+                    <p class="tablinks" onclick="opentab('about', 'interests')">Research Interests</p>
                 </div>
 
                 <!-- EDUCATION -->
@@ -194,10 +209,10 @@
     <div class="container">
         <h1 class="subtitle">Others</h1>
         <div class="tabtitles">
-          <p class="tablinks activelink" onclick="opentab('tests')">Test Scores</p>
-          <p class="tablinks" onclick="opentab('extracurricular')">Extracurricular</p>
-          <p class="tablinks" onclick="opentab('certifications')">Certifications</p>
-          <p class="tablinks" onclick="opentab('awards')">Awards & Scholarships</p>
+            <p class="tablinks activelink" onclick="opentab('others', 'tests')">Test Scores</p>
+            <p class="tablinks" onclick="opentab('others', 'extracurricular')">Extracurricular</p>
+            <p class="tablinks" onclick="opentab('others', 'certifications')">Certifications</p>
+            <p class="tablinks" onclick="opentab('others', 'awards')">Awards & Scholarships</p>
         </div>
 
         <!-- EXTRACURRICULAR -->
@@ -449,6 +464,22 @@
                         <a href="mailto:asm.junayethossain@gmail.com">asm.junayethossain@gmail.com</a>
                     </li>
                     <li>
+                        <span class="contact-icon"><i class="fa-solid fa-building-columns"></i></span>
+                        <a href="mailto:junayet.h@eastdelta.edu.bd">junayet.h@eastdelta.edu.bd</a>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fa-brands fa-google"></i></span>
+                        <a href="https://scholar.google.com/citations?user=en333McAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fa-brands fa-researchgate"></i></span>
+                        <a href="https://www.researchgate.net/profile/A-S-M-Junayet-Hossain" target="_blank">ResearchGate</a>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fa-brands fa-orcid"></i></span>
+                        <a href="https://orcid.org/0009-0007-6810-9570" target="_blank">ORCID: 0009-0007-6810-9570</a>
+                    </li>
+                    <li>
                         <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
                         <a href="https://www.linkedin.com/in/junayet-hossain/" target="_blank">A. S. M. Junayet Hossain</a>
                     </li>
@@ -495,36 +526,20 @@
 </div>
 
 <script>
-    var tablinks = document.getElementsByClassName("tablinks");
-    var tabcontents = document.getElementsByClassName("tabcontents");
+    function opentab(sectionId, tabname) {
+        var section = document.getElementById(sectionId);
+        var tablinks = section.querySelectorAll(".tablinks");
+        var tabcontents = section.querySelectorAll(".tabcontents");
 
-    function opentab(tabname){
-        for (tablink of tablinks){
+        for (var tablink of tablinks) {
             tablink.classList.remove("activelink");
         }
-        for (tabcontent of tabcontents){
+        for (var tabcontent of tabcontents) {
             tabcontent.classList.remove("activetab");
         }
+
         event.currentTarget.classList.add("activelink");
         document.getElementById(tabname).classList.add("activetab");
-    }
-
-    function sendEmail(){
-        const name    = document.getElementById("sender-name").value.trim();
-        const email   = document.getElementById("sender-email").value.trim();
-        const subject = document.getElementById("msg-subject").value.trim();
-        const body    = document.getElementById("msg-body").value.trim();
-
-        if(!name || !email || !body){
-            alert("Please fill in your name, email, and message.");
-            return;
-        }
-
-        const mailto = `mailto:asm.junayethossain@gmail.com`
-            + `?subject=${encodeURIComponent(subject || "Portfolio Inquiry")}`
-            + `&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + body)}`;
-
-        window.location.href = mailto;
     }
 </script>
 
