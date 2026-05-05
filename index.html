@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junayet Hossain</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/342fc2fcdc.js" crossorigin="anonymous"></script>
 </head>
@@ -24,15 +25,40 @@
             </div>
         </nav>
         <div class="headertext">
-    <h1>Hi, I'm A. S. M. <span>Junayet </span>Hossain <br>from Bangladesh</h1>
-    <p class="header-bio">
-        Prospective PhD/MSc Candidate &nbsp;|&nbsp; 
-        Lecturer, <span>East Delta University</span>, Chattogram
-    </p>
-    <a href="https://drive.google.com/file/d/1BQsgId6hmdBWRYIubc_e-W0HAbcB0ajW/view?usp=drive_link" download class="btn header-cv-btn">
-        <i class="fa-solid fa-download"></i> &nbsp;Download CV
-    </a>
-</div>
+            <h1>Hi, I'm A. S. M. <span>Junayet</span> Hossain</h1>
+            <p class="header-bio">
+                Lecturer, <span>East Delta University</span>, Bangladesh
+            </p>
+            <p class="header-focus">
+                Research Focus: Multi-pulse rectifiers, harmonic mitigation, power electronics converters, and power quality in grid-integrated systems
+            </p>
+            <a href="your-cv.pdf" download class="btn header-cv-btn">
+                <i class="fa-solid fa-download"></i> &nbsp;Download CV
+            </a>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span><strong>2</strong> Journal Publications</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Power Electronics</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>IELTS <strong>7.0</strong></span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>CGPA <strong>3.64</strong>/4.00</span>
+                </div>
+            </div>
+            <div class="header-typing">
+                <span class="typing-prefix">→ </span>
+                <span class="typing-text" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+        </div>
     </div>
 </div>
 <!-- -----------------------about-------------------- -->
@@ -67,15 +93,20 @@
             </div>
             <div class="about-col-2">
                 <h1 class="subtitle">About Me</h1>
-                <p class="about-summary">Electrical & Electronic Engineering graduate from RUET with research focus on 
-                power electronics, harmonic mitigation, and renewable energy systems. Currently serving as Lecturer 
-                at East Delta University while actively pursuing graduate study opportunities.</p>
+                <p class="about-summary">
+                    Electrical & Electronic Engineering graduate from RUET and Lecturer at East Delta University, 
+                    Chattogram. My research centers on multi-pulse rectifier design, auxiliary injection techniques, 
+                    and harmonic mitigation in AC-DC conversion systems — addressing power quality challenges in 
+                    modern grids with increasing renewable energy integration. I am actively pursuing graduate study 
+                    opportunities to extend this work toward grid-integrated power electronic systems.
+                </p>
 
                 <div class="tabtitles">
                     <p class="tablinks activelink" onclick="opentab('about', 'education')">Education</p>
                     <p class="tablinks" onclick="opentab('about', 'experience')">Experience</p>
                     <p class="tablinks" onclick="opentab('about', 'publications')">Publications</p>
                     <p class="tablinks" onclick="opentab('about', 'interests')">Research Interests</p>
+                    <p class="tablinks" onclick="opentab('about', 'skills')">Technical Skills</p>
                 </div>
 
                 <!-- EDUCATION -->
@@ -103,6 +134,9 @@
                             <span class="tag">Top 15% — 4 Consecutive Years</span>
                             <span class="tag">University Technical Scholarship</span>
                         </div>
+                        <div class="entry-body" style="margin-top:10px;">
+                            <p>Graduated in the top 15% of the department with consistent academic performance across all four years, maintaining a CGPA of 3.64/4.00 with 3.84 in the final 100 credits.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -118,6 +152,11 @@
                             <div class="entry-right">
                                 <span class="date-badge active-badge">Sep 2025 – Present</span>
                             </div>
+                        </div>
+                        <div class="entry-body">
+                            <p><span class="entry-label">Courses Taught:</span> Electronic Devices & Circuits, Power Electronics, Electrical Machines, IC Fabrication & Nanotechnology</p>
+                            <p><span class="entry-label">Lab Supervision:</span> Electronic Devices & Circuits Lab, Power Electronics Lab, Electrical Machines Lab</p>
+                            <p><span class="entry-label">Other Duties:</span> Supervising undergraduate projects and mentoring students in research methodology</p>
                         </div>
                     </div>
                  
@@ -160,6 +199,7 @@
                         <p class="pub-ref">[1] M. A. Malek and A. S. M. J. Hossain, "Passive auxiliary injection circuits for 
                         pulse tripling in three parallel-connected rectifiers," 
                         <em>Journal of Electronic Science and Technology</em>, 2026, Art. no. 100360.</p>
+                        <p class="pub-focus">Proposed novel PAICs enabling 9-, 18-, and 54-pulse rectifier configurations without phase-shifting transformers — achieving THD reduction down to 1.90% with threefold increase in output-voltage pulses. Validated via MATLAB/Simulink for high-current industrial applications.</p>
                         <a href="https://doi.org/10.1016/j.jnlest.2026.100360" target="_blank" class="doi-link">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> 
                             doi: 10.1016/j.jnlest.2026.100360
@@ -171,6 +211,7 @@
                         rectifier using three new auxiliary injection circuits for harmonic mitigation," 
                         <em>e-Prime – Advances in Electrical Engineering, Electronics and Energy</em>, 
                         vol. 13, Art. no. 101086, 2025.</p>
+                        <p class="pub-focus">Three passive injection circuits enhance pulse count from 6 to 24, achieving 7.711% input current THD. Cost-efficient design validated through mathematical analysis, modeling, and simulation.</p>
                         <a href="https://doi.org/10.1016/j.prime.2025.101086" target="_blank" class="doi-link">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> 
                             doi: 10.1016/j.prime.2025.101086
@@ -184,17 +225,54 @@
                         <div class="interest-card">
                             <i class="fa-solid fa-bolt"></i>
                             <h4>Power Electronics</h4>
-                            <p>Harmonic mitigation in multi-pulse rectifiers, inverters, and cycloconverters</p>
+                            <p>Harmonic mitigation in multi-pulse rectifiers and auxiliary injection techniques in AC-DC converters</p>
                         </div>
                         <div class="interest-card">
                             <i class="fa-solid fa-solar-panel"></i>
-                            <h4>Renewable Energy</h4>
-                            <p>Photovoltaic systems, solar cell technologies, and ML applications in energy</p>
+                            <h4>Renewable Energy Integration</h4>
+                            <p>Power quality improvement in grid-connected systems with increasing photovoltaic and renewable sources</p>
                         </div>
                         <div class="interest-card">
                             <i class="fa-solid fa-microchip"></i>
-                            <h4>Electronics</h4>
-                            <p>VLSI design and digital systems</p>
+                            <h4>VLSI & Electronics</h4>
+                            <p>IC fabrication, digital systems design, and nanotechnology applications in electronic circuits</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="tabcontents" id="skills">
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4 class="skill-group-title"><i class="fa-solid fa-desktop"></i> Simulation</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">Simulink</span>
+                                <span class="skill-tag">Proteus</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4 class="skill-group-title"><i class="fa-solid fa-code"></i> Programming</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">Arduino</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4 class="skill-group-title"><i class="fa-solid fa-wrench"></i> Hardware</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">PCB Design & Building</span>
+                                <span class="skill-tag">Power Electronic Circuits</span>
+                                <span class="skill-tag">IGBT Control</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4 class="skill-group-title"><i class="fa-solid fa-pencil"></i> Tools</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">AutoCAD</span>
+                                <span class="skill-tag">LaTeX</span>
+                                <span class="skill-tag">Technical Writing</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -207,11 +285,10 @@
 
 <div id="others">
     <div class="container">
-        <h1 class="subtitle">Others</h1>
+        <h1 class="subtitle">Achievements & Activities</h1>
         <div class="tabtitles">
             <p class="tablinks activelink" onclick="opentab('others', 'tests')">Test Scores</p>
             <p class="tablinks" onclick="opentab('others', 'extracurricular')">Extracurricular</p>
-            <p class="tablinks" onclick="opentab('others', 'certifications')">Certifications</p>
             <p class="tablinks" onclick="opentab('others', 'awards')">Awards & Scholarships</p>
         </div>
 
@@ -260,47 +337,6 @@
                         </div>
                     </div>
                     <p class="others-detail">Engaged in robotics programs, hands-on workshops, and technical competitions.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- CERTIFICATIONS -->
-        <div class="tabcontents" id="certifications">
-            <div class="cert-list">
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <div class="cert-body">
-                        <h4>Basics of Electrical Machines: Transformers, DC & AC Machines</h4>
-                        <p>Dept. of EEE, RUET &nbsp;·&nbsp; December 2023</p>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <div class="cert-body">
-                        <h4>Radar and Satellite Communication with Training Module</h4>
-                        <p>Dept. of EEE, RUET &nbsp;·&nbsp; December 2023</p>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <div class="cert-body">
-                        <h4>Antennas and Propagation</h4>
-                        <p>Dept. of EEE, RUET &nbsp;·&nbsp; December 2023</p>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
-                    <div class="cert-body">
-                        <h4>Technical Support Fundamentals</h4>
-                        <p>Coursera &nbsp;·&nbsp; 2021</p>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
-                    <div class="cert-body">
-                        <h4>Python Basics</h4>
-                        <p>Coursera &nbsp;·&nbsp; 2020</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -398,10 +434,10 @@
         <img src="images/Journal2.jpg">
         <div class="layer">
             <span class="work-tag">Journal Publication · 2026</span>
-            <h3>Passive Auxiliary Injection Circuits for Pulse Tripling</h3>
-            <p>M. A. Malek and A. S. M. J. Hossain — <em>Journal of Electronic Science and Technology</em>, 2026.</p>
-            <a href="https://doi.org/10.1016/j.jnlest.2026.100360" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <h3>Passive Auxiliary Injection Circuits for Pulse Tripling</h3>
+                <p>Novel PAICs enabling 9-, 18-, and 54-pulse rectifier configurations without phase-shifting transformers. Achieved THD reduction to 1.90% for high-current industrial applications.</p>
+                <a href="https://doi.org/10.1016/j.jnlest.2026.100360" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
         </div>
     </div>
@@ -411,7 +447,7 @@
         <div class="layer">
             <span class="work-tag">Journal Publication · 2025</span>
             <h3>Simple 24-Pulse Star Rectifier for Harmonic Mitigation</h3>
-            <p>A. S. M. J. Hossain et al. — <em>e-Prime – Advances in Electrical Engineering</em>, vol. 13, 2025.</p>
+            <p>Three passive injection circuits enhance pulse count from 6 to 24, achieving 7.711% input current THD. Validated through mathematical analysis, modeling, and MATLAB/Simulink simulation.</p>
             <a href="https://doi.org/10.1016/j.prime.2025.101086" target="_blank">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
@@ -423,7 +459,7 @@
         <div class="layer">
             <span class="work-tag">Hardware Project</span>
             <h3>IGBT-Based Control Circuit for 24-Pulse Rectifier</h3>
-            <p>Design and implementation of an IGBT-based control circuit for the newly designed 24-pulse rectifier system.</p>
+            <p>Designed phase detector and IGBT driver circuits using Arduino Mega, optocouplers, and PWM generation. Prototype built and tested in RUET Electronics Lab — verified via oscilloscope gate-pulse analysis.</p>
             <a href="https://drive.google.com/file/d/1YKiXy2qItY8XJ3tmEN1eLfaBtK7NIYxG/view?usp=drive_link" target="_blank">
                 <i class="fa-solid fa-link"></i>
             </a>
@@ -435,8 +471,8 @@
         <div class="layer">
             <span class="work-tag">Undergraduate Thesis</span>
             <h3>24-Pulse Star Rectifier Using Auxiliary Injection Circuits</h3>
-            <p>Design and simulation of a simple 24-pulse rectifier for harmonic mitigation using three novel auxiliary injection circuits.</p>
-            <a href="https://drive.google.com/file/d/1MuVecC0Gkkm1b_Eka8E5H5iWUeQSkFV3/view?usp=sharing" target="_blank">
+            <p>Designed and simulated three novel auxiliary injection circuits converting a 6-pulse to 24-pulse rectifier. Achieved significant harmonic reduction with a cost-efficient, low-component implementation.</p>
+            <a href="https://drive.google.com/file/d/1TqA5mx4_rlGMI1aBndoanXgrcWuGGfdw/view?usp=drive_link" target="_blank">
                 <i class="fa-solid fa-link"></i>
             </a>
         </div>
@@ -458,14 +494,14 @@
                     <li>
                         <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
                         <span>East Delta University, East Nasirabad, Khulsi, Chattogram-4209, Bnagladesh</span>
+                    </li> 
+                    <li>
+                        <span class="contact-icon"><i class="fa-solid fa-building-columns"></i></span>
+                        <a href="mailto:junayet.h@eastdelta.edu.bd">junayet.h@eastdelta.edu.bd</a>
                     </li>
                     <li>
                         <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
                         <a href="mailto:asm.junayethossain@gmail.com">asm.junayethossain@gmail.com</a>
-                    </li>
-                    <li>
-                        <span class="contact-icon"><i class="fa-solid fa-building-columns"></i></span>
-                        <a href="mailto:junayet.h@eastdelta.edu.bd">junayet.h@eastdelta.edu.bd</a>
                     </li>
                     <li>
                         <span class="contact-icon"><i class="fa-brands fa-google"></i></span>
@@ -482,11 +518,7 @@
                     <li>
                         <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
                         <a href="https://www.linkedin.com/in/junayet-hossain/" target="_blank">A. S. M. Junayet Hossain</a>
-                    </li>
-                    <li>
-                        <span class="contact-icon"><i class="fa-brands fa-facebook"></i></span>
-                        <a href="https://www.facebook.com/junayet.prime/" target="_blank">Asm Junayet Hossain</a>
-                    </li>
+                    </li>  
                     <li>
                         <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
                         <a href="tel:+8801825929752">+880 1825 929752</a>
@@ -541,6 +573,41 @@
         event.currentTarget.classList.add("activelink");
         document.getElementById(tabname).classList.add("activetab");
     }
+
+    const phrases = [
+        "Harmonic Mitigation in Power Electronic Converters",
+        "Multi-pulse Rectifier Design & Analysis",
+        "Lecturer & PhD Applicant in Power Electronics"
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingEl = document.getElementById("typingText");
+
+    function typeLoop() {
+        const current = phrases[phraseIndex];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIndex--);
+        } else {
+            typingEl.textContent = current.substring(0, charIndex++);
+        }
+
+        let speed = isDeleting ? 40 : 70;
+
+        if (!isDeleting && charIndex === current.length + 1) {
+            speed = 1800;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            speed = 400;
+        }
+
+        setTimeout(typeLoop, speed);
+    }
+
+    typeLoop();
 </script>
 
 </body>
