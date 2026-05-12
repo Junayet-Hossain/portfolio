@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #161a27;
+    --primary: #8b5cf6;
+    --secondary: #d8c8ff;
+    --card: #1f2435;
+    --border: #3a4260;
+}
+
 html{
     scroll-behavior: smooth;
 }
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,16 +20,32 @@ html{
     box-sizing: border-box;
 }
 body{
-    background: #080808;
+    background: var(--bg);
     color: #fff;
 }
+
+
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/Image-01.png);
-    background-size: cover;
-    background-position: center;
+    background-image: none;
+    background-color: var(--bg);
+    position: relative;
+    overflow: hidden;
 }
+
+.header-photo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 95%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+    pointer-events: none;
+}
+
+
 .container{
    padding: 10px 10%; 
 }
@@ -50,7 +77,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: var(--primary);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -76,7 +103,7 @@ nav ul li a:hover::after{
 }
 
 .headertext h1 span {
-    color: #ff004f;
+    color: var(--primary);
 }
 
 .header-bio {
@@ -89,7 +116,7 @@ nav ul li a:hover::after{
 } 
 
 .header-bio span {
-    color: #ff004f;
+    color: var(--primary);
     font-weight: 500;
 }
 
@@ -109,7 +136,7 @@ nav ul li a:hover::after{
 .header-cv-btn {
     display: inline-block;
     margin: 18px 0 0 0;
-    border: 1px solid #ff004f;
+    border: 1px solid var(--primary);
     padding: 11px 26px;
     border-radius: 6px;
     text-decoration: none;
@@ -120,7 +147,7 @@ nav ul li a:hover::after{
 
 
 .header-cv-btn:hover {
-    background: #ff004f;
+    background: var(--primary);
 }
 
 /* --- Stats Row --- */
@@ -145,7 +172,7 @@ nav ul li a:hover::after{
 }
 
 .stat-item i {
-    color: #ff004f;
+    color: var(--primary);
     font-size: 14px;
 }
 
@@ -165,7 +192,7 @@ nav ul li a:hover::after{
 }
 
 .typing-prefix {
-    color: #ff004f;
+    color: var(--primary);
     font-weight: 600;
 }
 
@@ -175,7 +202,7 @@ nav ul li a:hover::after{
 }
 
 .typing-cursor {
-    color: #ff004f;
+    color: var(--primary);
     font-weight: 300;
     animation: blink 0.8s infinite;
 }
@@ -229,7 +256,7 @@ nav ul li a:hover::after{
 }
 
 .profile-links a:hover {
-    color: #ff004f;
+    color: var(--primary);
 }
 
 .about-col-2{
@@ -242,7 +269,7 @@ nav ul li a:hover::after{
     line-height: 1.8;
     margin-bottom: 10px;
     text-align: justify;
-    border-left: 3px solid #ff004f;
+    border-left: 3px solid var(--primary);
     padding-left: 15px;
 }
 
@@ -278,7 +305,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 2px;
-    background: #ff004f;
+    background: var(--primary);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -310,11 +337,11 @@ nav ul li a:hover::after{
 }
 
 .academic-entry:hover {
-    border-color: #ff004f;
+    border-color: var(--primary);
 }
 
 .highlight-entry {
-    border-left: 2px solid #ff004f;
+    border-left: 2px solid var(--primary);
     background: rgba(255, 0, 79, 0.04);
     border-radius: 0 8px 8px 0;
     padding: 16px 16px 16px 20px;
@@ -337,7 +364,7 @@ nav ul li a:hover::after{
 
 .institution {
     font-size: 14px;
-    color: #b54769;
+    color: var(--secondary);
     font-weight: 500;
     margin-bottom: 3px;
 }
@@ -360,15 +387,15 @@ nav ul li a:hover::after{
     font-size: 12px;
     color: #ababab;
     background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    border: 1px solid var(--border);
     padding: 3px 10px;
     border-radius: 20px;
     white-space: nowrap;
 }
 
 .active-badge {
-    border-color: #ff004f;
-    color: #ff004f;
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .cgpa {
@@ -389,7 +416,7 @@ nav ul li a:hover::after{
 }
 
 .entry-label {
-    color: #b54769;
+    color: var(--secondary);
     font-weight: 500;
     margin-right: 5px;
 }
@@ -407,7 +434,7 @@ nav ul li a:hover::after{
     border-radius: 20px;
     background: #1a1a1a;
     color: #888;
-    border: 1px solid #2a2a2a;
+    border: 1px solid var(--border);
 }
 
 /* --- Publications --- */
@@ -419,8 +446,8 @@ nav ul li a:hover::after{
 }
 
 .pub-entry {
-    background: #111;
-    border: 1px solid #2a2a2a;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 18px 20px;
     margin-bottom: 16px;
@@ -429,11 +456,11 @@ nav ul li a:hover::after{
 }
 
 .pub-entry:hover {
-    border-color: #b54769;
+    border-color: var(--secondary);
 }
 
 .pub-featured {
-    border-color: #ff004f;
+    border-color: var(--primary);
     background: rgba(255, 0, 79, 0.05);
 }
 
@@ -441,7 +468,7 @@ nav ul li a:hover::after{
     position: absolute;
     top: -10px;
     right: 15px;
-    background: #ff004f;
+    background: var(--primary);
     color: #fff;
     font-size: 10px;
     font-weight: 600;
@@ -465,7 +492,7 @@ nav ul li a:hover::after{
 
 .doi-link {
     font-size: 12px;
-    color: #b54769;
+    color: var(--secondary);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -484,7 +511,7 @@ nav ul li a:hover::after{
 }
 
 .doi-link:hover {
-    color: #ff004f;
+    color: var(--primary);
 }
 
 /* --- Research Interests --- */
@@ -496,8 +523,8 @@ nav ul li a:hover::after{
 }
 
 .interest-card {
-    background: #111;
-    border: 1px solid #2a2a2a;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 22px 18px;
     transition: border-color 0.3s, transform 0.3s;
@@ -505,13 +532,13 @@ nav ul li a:hover::after{
 }
 
 .interest-card:hover {
-    border-color: #ff004f;
+    border-color: var(--primary);
     transform: translateY(-4px);
 }
 
 .interest-card i {
     font-size: 26px;
-    color: #ff004f;
+    color: var(--primary);
     margin-bottom: 12px;
 }
 
@@ -536,15 +563,15 @@ nav ul li a:hover::after{
 }
 
 .skill-group {
-    background: #111;
-    border: 1px solid #2a2a2a;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 18px;
     transition: border-color 0.3s;
 }
 
 .skill-group:hover {
-    border-color: #ff004f;
+    border-color: var(--primary);
 }
 
 .skill-group-title {
@@ -558,7 +585,7 @@ nav ul li a:hover::after{
 }
 
 .skill-group-title i {
-    color: #ff004f;
+    color: var(--primary);
     font-size: 13px;
 }
 
@@ -574,7 +601,7 @@ nav ul li a:hover::after{
     border-radius: 20px;
     background: #1a1a1a;
     color: #ababab;
-    border: 1px solid #2a2a2a;
+    border: 1px solid var(--border);
 }
 
 
@@ -593,15 +620,15 @@ nav ul li a:hover::after{
 }
 
 .others-card {
-    background: #111;
-    border: 1px solid #2a2a2a;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 22px 20px;
     transition: border-color 0.3s, transform 0.3s;
 }
 
 .others-card:hover {
-    border-color: #ff004f;
+    border-color: var(--primary);
     transform: translateY(-4px);
 }
 
@@ -614,7 +641,7 @@ nav ul li a:hover::after{
 
 .others-card-header i {
     font-size: 22px;
-    color: #ff004f;
+    color: var(--primary);
     margin-top: 3px;
     flex-shrink: 0;
 }
@@ -628,7 +655,7 @@ nav ul li a:hover::after{
 
 .others-org {
     font-size: 13px;
-    color: #b54769;
+    color: var(--secondary);
 }
 
 .others-detail {
@@ -663,7 +690,7 @@ nav ul li a:hover::after{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ff004f;
+    background: var(--primary);
     position: absolute;
     left: -26px;
     top: 22px;
@@ -675,7 +702,7 @@ nav ul li a:hover::after{
 
 .award-year {
     font-size: 12px;
-    color: #ff004f;
+    color: var(--primary);
     font-weight: 600;
     min-width: 70px;
     padding-top: 2px;
@@ -697,8 +724,8 @@ nav ul li a:hover::after{
 
 /* -- IELTS Score -- */
 .ielts-wrapper {
-    background: #111;
-    border: 1px solid #ff004f;
+    background: var(--card);
+    border: 1px solid var(--primary);
     border-radius: 12px;
     padding: 30px 35px;
     max-width: 620px;
@@ -735,7 +762,7 @@ nav ul li a:hover::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #ff004f;
+    background: var(--primary);
     border-radius: 10px;
     padding: 12px 28px;
 }
@@ -783,13 +810,13 @@ nav ul li a:hover::after{
 
 .band-bar {
     height: 100%;
-    background: #b54769;
+    background: var(--secondary);
     border-radius: 20px;
     transition: width 0.8s ease;
 }
 
 .band-bar-high {
-    background: #ff004f;
+    background: var(--primary);
 }
 
 .band-score {
@@ -801,7 +828,7 @@ nav ul li a:hover::after{
 }
 
 .highlight-score {
-    color: #ff004f;
+    color: var(--primary);
     font-size: 16px;
 }
 /*-------------------------------SERVICES--------------------*/
@@ -875,7 +902,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.75), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.75), var(--primary));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -917,7 +944,7 @@ nav ul li a:hover::after{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #ff004f;
+    color: var(--primary);
     text-decoration: none;
     font-size: 16px;
     background: #fff;
@@ -945,7 +972,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid var(--primary);
     padding: 14px;
     border-radius: 6px; 
     text-decoration: none;
@@ -955,7 +982,7 @@ nav ul li a:hover::after{
  }
 
  .btn:hover{
-    background: #ff004f;
+    background: var(--primary);
  }
 
 
@@ -976,15 +1003,15 @@ nav ul li a:hover::after{
 .contact-info {
     flex: 1;
     min-width: 260px;
-    background: #111;
-    border: 1px solid #2a2a2a;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 30px;
     transition: border-color 0.3s;
 }
 
 .contact-info:hover {
-    border-color: #ff004f;
+    border-color: var(--primary);
     transform: none;
 }
 
@@ -1013,7 +1040,7 @@ nav ul li a:hover::after{
 }
 
 .contact-icon {
-    color: #ff004f;
+    color: var(--primary);
     font-size: 15px;
     margin-top: 2px;
     flex-shrink: 0;
@@ -1026,22 +1053,22 @@ nav ul li a:hover::after{
 }
 
 .contact-info a:hover {
-    color: #ff004f;
+    color: var(--primary);
 }
 
 /* --- Form --- */
 .contact-form-box {
     flex: 1.4;
     min-width: 300px;
-    background: #111;
-    border: 1px solid #2a2a2a;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 30px;
     transition: border-color 0.3s;
 }
 
 .contact-form-box:hover {
-    border-color: #ff004f;
+    border-color: var(--primary);
 }
 
 .form-row {
@@ -1072,7 +1099,7 @@ nav ul li a:hover::after{
 .form-group input,
 .form-group textarea {
     background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    border: 1px solid var(--border);
     border-radius: 6px;
     padding: 10px 14px;
     color: #fff;
@@ -1085,7 +1112,7 @@ nav ul li a:hover::after{
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff004f;
+    border-color: var(--primary);
 }
 
 .form-group input::placeholder,
@@ -1095,7 +1122,7 @@ nav ul li a:hover::after{
 
 .send-btn {
     background: transparent;
-    border: 1px solid #ff004f;
+    border: 1px solid var(--primary);
     color: #fff;
     padding: 12px 28px;
     border-radius: 6px;
@@ -1109,7 +1136,7 @@ nav ul li a:hover::after{
 }
 
 .send-btn:hover {
-    background: #ff004f;
+    background: var(--primary);
 }
 
 /* --- Work tag in project cards --- */
@@ -1119,7 +1146,7 @@ nav ul li a:hover::after{
     text-transform: uppercase;
     letter-spacing: 1px;
     background: rgba(255,255,255,0.2);
-    color: #ffffff;
+    color: var(--primary);
     padding: 3px 10px;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -1132,14 +1159,26 @@ nav ul li a:hover::after{
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-  #header {
-    background-image: url(images/Image-01.png);
-    background-position: right center;
-    background-size: cover;
+#header {
+    background-image: none;
     height: auto;
     min-height: 100vh;
     padding-bottom: 60px;
-  } 
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-photo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+    order: unset;
+  }
 
 .headertext {
     margin-top: 5%;
@@ -1229,13 +1268,27 @@ nav ul li a:hover::after{
 
   /* ---- HEADER ---- */
 #header {
-    height: 170vw;
+    height: auto;
     min-height: unset;
     padding-bottom: 0;
-    background-image: url(images/Mobile.png);
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+.header-photo {
+    position: relative;
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    bottom: unset;
+    right: unset;
+    order: 2;
+  }
+
+#header .container {
+    order: 1;
   }
 
   .headertext {
@@ -1304,11 +1357,8 @@ nav ul li a:hover::after{
     gap: 0;
   }
 
-  .about-col-1 {
-    flex-basis: 100%;
-    width: 100%;
-    margin-bottom: 35px;      /* <-- breathing room below image */
-    padding-bottom: 10px;
+.about-col-1 {
+    display: none;
   }
 
   .about-col-1 img {
